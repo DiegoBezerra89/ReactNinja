@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Hello</h1>
+    <div class="App"><!--Esta div é utilizada para renderização dos componentes criados-->
+    </div>
+    <!--importando o React de maneira Global-->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script>
+        //React.createElement() cria um elemento react
+        var h1 = React.createElement('h1', null, 'Hello h1 React') //('tag', propriedades, 'conteúdo')
+        console.log(h1);
+        /*
+        Object
+            $$typeof: Symbol(react.element)
+            key: null
+            props:
+            children: "Hello h1 React"
+            __proto__:
+            constructor: ƒ Object()
+            hasOwnProperty: ƒ hasOwnProperty()
+            isPrototypeOf: ƒ isPrototypeOf()
+            propertyIsEnumerable: ƒ propertyIsEnumerable()
+            toLocaleString: ƒ toLocaleString()
+            toString: ƒ toString()
+            valueOf: ƒ valueOf()
+            __defineGetter__: ƒ __defineGetter__()
+            __defineSetter__: ƒ __defineSetter__()
+            __lookupGetter__: ƒ __lookupGetter__()
+            __lookupSetter__: ƒ __lookupSetter__()
+            get __proto__: ƒ __proto__()
+            set __proto__: ƒ __proto__()
+            ref: null
+            type: "h1"
+            _owner: null
+            __proto__: Object
+        */
+        ReactDOM.render(h1, document.getElementById('App')) //renderiza o h1 na div de ID App
+    </script>
+</body>
+</html>
