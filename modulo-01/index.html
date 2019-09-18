@@ -10,6 +10,7 @@
     <h1> Hello</h1>
     <div class="App"><!--Esta div é utilizada para renderização dos componentes criados-->
     </div>
+    <div class="App2"></div>
     <!--importando o React de maneira Global-->
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
@@ -43,7 +44,30 @@
             _owner: null
             __proto__: Object
         */
-        ReactDOM.render(h1, document.getElementById('App')) //renderiza o h1 na div de ID App
+
+        /*
+        let elemento2 = React.createElement('div', null, React.createElement('h1', null, 'Meu texto aninhado.'))
+        <div>
+            <h1>Meu texto aninhado.</h1>
+        </div>
+        */
+
+        
+        //array para aninhar elementos
+        let elemento3 = React.createElement('div', null, [
+            React.createElement(
+                'h1',
+                null,
+                'Texto exemplo de Array de elementos, h1'
+            ),
+            React.createElement(
+                'p',
+                null,
+                'Parágrafo Exemplo de array de elementos'
+            )]
+        )
+        
+        ReactDOM.render(elemento3, document.querySelector('.App')) //renderiza o h1 na div de ID App
     </script>
 </body>
 </html>
