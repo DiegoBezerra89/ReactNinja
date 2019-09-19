@@ -72,11 +72,22 @@
         */    
         const Title = React.createClass({
             render: () => {
-                return <h1>Texto De Exemplo</h1>
+                //aqui, a formatação do jsx é identica a do html
+                return (
+                    <div>
+                        <h1>Diego</h1>
+                        <h2>Renata</h2>
+                    </div>
+                    //não é possível colocar mais de um block type element
+                    // <div>
+                    //     <h1>Diego</h1>
+                    //     <h2>Renata</h2> 
+                    // <div>
+                )
             }
         })
 
-        ReactDOM.render(
+        ReactDOM.render( //recebe dois parametros, uma tag jsx com o nome do componente criado, e o elemento do DOM onde o componente será renderizado
             <Title />,
             document.getElementById('App')
         )
