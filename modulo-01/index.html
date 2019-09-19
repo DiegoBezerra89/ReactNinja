@@ -7,18 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Hello</h1>
-    <div class="App"><!--Esta div é utilizada para renderização dos componentes criados-->
+    <div id="App"><!--Esta div é utilizada para renderização dos componentes criados-->
     </div>
-    <div class="App2"></div>
     <!--importando o React de maneira Global-->
-    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-
-    <script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+    <script type="text/babel">
         //React.createElement() cria um elemento react
-        var h1 = React.createElement('h1', null, 'Hello h1 React') //('tag', propriedades, 'conteúdo')
-        console.log(h1);
+        //var h1 = React.createElement('h1', null, 'Hello h1 React') //('tag', propriedades, 'conteúdo')
         /*
         Object
             $$typeof: Symbol(react.element)
@@ -52,7 +49,7 @@
         </div>
         */
 
-        
+        /*
         //array para aninhar elementos
         let elemento3 = React.createElement('div', null, [
             React.createElement(
@@ -67,7 +64,22 @@
             )]
         )
         
-        ReactDOM.render(elemento3, document.querySelector('.App')) //renderiza o h1 na div de ID App
+        /*
+        ReactDOM.render(
+            <h1>Texto teste</h1>,
+            document.getElementById('App')
+        ) 
+        */    
+        const Title = React.createClass({
+            render: () => {
+                return <h1>Texto De Exemplo</h1>
+            }
+        })
+
+        ReactDOM.render(
+            <Title />,
+            document.getElementById('App')
+        )
     </script>
 </body>
 </html>
