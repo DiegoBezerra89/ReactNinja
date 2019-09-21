@@ -1,12 +1,13 @@
 'use strict'
 
-let React = require('react')
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 
-let Title = React.createClass({
+const Title = React.createClass({
     render: () => {
         return React.createElement('h1', null, 'Título')
     }
 })
 
-module.exports = Title
+export default Title
