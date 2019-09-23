@@ -4,10 +4,18 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 
-const Title = React.createClass({
+const App = React.createClass({
     render: () => {
-        return React.createElement('h1', null, 'Título')
+        return (
+        <div>
+            <h1>Aplicação</h1>
+            <h2>Diego</h2>
+            <h2>Adenilson</h2>  
+            <p>Texto</p>
+            <img src="../ceu-azul-com-nuvens-brancas_1112-216.jpg"></img>
+        </div>
+        )
     }
 })
 
-export default Title
+export default App
